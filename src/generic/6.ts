@@ -12,12 +12,16 @@ type User = {
   surname: string;
   email: string;
   password: string;
-}
+};
 
-function createOrUpdateUser(initialValues: User) {
+// Partial робить властивості типу User не обов.
+function createOrUpdateUser(initialValues: Partial<User>) {
   // Оновлення користувача
 }
 
-createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
+createOrUpdateUser({
+  email: "user@mail.com",
+  password: "password123",
+});
 
 export {};
